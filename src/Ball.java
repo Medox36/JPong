@@ -35,18 +35,14 @@ public class Ball extends JPanel{
             setYDirection(-yVelocity);
         if (getY()+16 >= field.getHeight())
             setYDirection(-yVelocity);
-        if (getX()+16 >= p2r.getX() && getX()+16 <= p2r.getX()) {
-            if (getY() >= p2r.getY() && getY()+1 <= p2r.getY()+76) {
+        if (getX()+16 >= p2r.getX() && getX()+14 <= p2r.getX()) {
+            if ((getY() >= p2r.getY() && getY()+1 <= p2r.getY()+76)
+                    || (getY()+16 >= p2r.getY() && getY()+16 <= p2r.getY()+76)) {
                 setXDirection(-xVelocity);
             }
-            if (getY() >= p2r.getY() && getY()+16 <= p2r.getY()) {
-                setXDirection(-xVelocity);
-            }
-        } else if (getX() <= p1l.getX()+12 && getX() >= p1l.getX()+12) {
-            if (getY() >= p1l.getY() && getY()+1 <= p1l.getY()+76) {
-                setXDirection(-xVelocity);
-            }
-            if (getY() >= p1l.getY() && getY()+16 <= p1l.getY()) {
+        } else if (getX() <= p1l.getX()+12 && getX() >= p1l.getX()+10) {
+            if ((getY() >= p1l.getY() && getY()+1 <= p1l.getY()+76)
+                    || (getY()+16 >= p1l.getY() && getY()+16 <= p1l.getY()+76)) {
                 setXDirection(-xVelocity);
             }
         }
